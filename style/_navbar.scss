@@ -1,0 +1,99 @@
+@mixin navar-css{
+    
+
+.nav-container {
+    border-bottom: .1rem solid #9FA1A339;
+    
+    height: 7.3rem;
+
+    .navbar {
+        font-family: $font-main;
+        height: 100%;
+        margin: 0 2.8rem;
+        @include flex-box;
+
+        .logo {
+            font-size: 1.3rem;
+        }
+
+        .menu {
+            width: 61rem;
+            @include flex-box;
+
+            .nav-link {
+                span {
+                    background-color: white;
+                    color: black;
+                    border-radius: 1rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 0 .3rem;
+
+                }
+
+                margin-left: 2.3rem;
+                font-family: sans-serif;
+                width: 29rem;
+                list-style: none;
+                @include flex-box;
+                justify-content: space-between;
+                opacity: .95;
+                font-size: 1.2rem;
+                font-weight: 100
+            }
+
+            .nav-btn-ham {
+                @include flex-box;
+
+                #investor-btn {
+                    position: relative;
+                    
+                    border-radius: .3rem;
+
+                    div {
+                        @include flex-box;
+                        width: 13rem;
+                        height: 3.4rem;
+                        padding-left: 1.7rem;
+                        justify-content: center;
+                        border-radius: .3rem;
+                        border: .1rem solid #9FA1A339;
+                        background: rgba(0, 0, 0, 0.84);
+
+                        h1 {
+                            
+                            font-size: 1.1rem;
+
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        border-radius: .3rem;
+                        background-color: rgb(225, 221, 221);
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        z-index: -1;
+                        filter: blur(.01rem);
+
+                    }
+                }
+
+                #ham-btn {
+                    height: 4rem;
+                    width: 5rem;
+                    border: 1px solid red;
+
+                }
+
+
+
+            }
+
+
+        }
+
+    }
+}
+}
