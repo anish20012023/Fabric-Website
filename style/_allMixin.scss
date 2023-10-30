@@ -1,43 +1,45 @@
-@mixin flex-box{
+@mixin flex-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-@mixin left-bdr-btn{
+@mixin left-bdr-btn {
     .left-bdr-btn {
-       position: relative;
-       cursor: pointer;
+        position: relative;
+        cursor: pointer;
         height: 5rem;
         width: 50%;
         margin-bottom: 2.8rem;
-        padding:0 2.5rem;
+        padding: 0 2.5rem;
         border-left: .17rem solid rgb(203, 217, 10);
         font-family: "Raleway", sans-serif;
         @include flex-box;
-        p{
+
+        p {
             font-size: 1.17rem;
         }
-        span{
-        font-size: 1.5rem;
+
+        span {
+            font-size: 1.5rem;
         }
-        
-&:hover::before{
-    content:"";
-    position: absolute;
-    background-color: rgba(225, 225, 102, 0.4);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    
-}
+
+        &:hover::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(225, 225, 102, 0.4);
+            width: 100%;
+            height: 100%;
+            left: 0;
+
+        }
 
     }
 }
 
-@mixin sec-heading{
-    
+@mixin sec-heading {
+
     .sec-heading-txt {
         height: 18rem;
         padding-left: 2.8rem;
@@ -66,8 +68,9 @@
 
     }
 }
-@mixin cards{
-    
+
+@mixin cards {
+
     height: 31.3rem;
     width: 25rem;
     border-radius: .6rem;
@@ -125,7 +128,7 @@
 
     }
 
-    
+
     .lower-card {
         height: calc(100% - 82%);
         border-top: .15rem solid #9FA1A339;
@@ -153,6 +156,56 @@
             font-weight: 400;
 
 
+        }
+
+    }
+}
+
+@mixin greyscale-image {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: .5rem;
+    filter: grayscale(100%) brightness(0.9);;
+}
+@mixin last-card{
+    
+
+    &.card8 {
+        font-family: 'Roboto', sans-serif;
+        background-image: linear-gradient(rgb(86, 85, 85), rgb(35, 35, 35));
+
+        .upper-card {
+            padding: 7rem 2.8rem;
+
+            .last-card-text {
+                font-size: 2rem;
+                font-weight: 400;
+                color: rgb(211, 209, 209);
+
+            }
+
+            .last-card-numb {
+                color: rgb(112, 112, 112);
+                font-size: 1.4rem;
+                margin-top: 1.7rem;
+                font-weight: 400;
+
+            }
+
+        }
+
+        .last-card-p {
+            p {
+                color: rgb(212, 210, 210);
+                font-weight: 300;
+            }
+
+            span {
+                background-color: rgb(250, 76, 18);
+            }
         }
 
     }

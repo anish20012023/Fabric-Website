@@ -12,12 +12,13 @@ body {
   color: white;
   position: relative;
   background-color: #000000;
-  z-index: 1; }
+  z-index: 1;
+  height: max-content; }
   body::-webkit-scrollbar {
     display: none; }
   body .bdr {
     width: .1rem;
-    height: 500rem;
+    height: 100%;
     position: absolute;
     z-index: 100;
     background-color: #9FA1A339;
@@ -350,7 +351,7 @@ body {
           background-color: #fa4c12; }
 
 .bold-main-sec {
-  height: 39.5rem;
+  height: 30.5rem;
   padding-top: 11.7rem; }
   .bold-main-sec .bold-sec {
     margin: 0 2.8rem 0 auto;
@@ -518,5 +519,249 @@ body {
       background: rgba(209, 209, 209, 0.1);
       z-index: -1;
       backdrop-filter: blur(55px); }
+
+.contribution-sec {
+  height: 72rem;
+  margin: 0 2.8rem;
+  background-image: radial-gradient(circle at 50% 100%, #530c01 10%, #050505 49%, black 60%);
+  display: flex; }
+  .contribution-sec .outer-half {
+    border: 1px solid;
+    height: 100%;
+    width: 50%; }
+  .contribution-sec .contri-right-div div {
+    height: 50%;
+    padding: 0 2.8rem; }
+  .contribution-sec .contri-right-div .right-div1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: 8rem;
+    border-bottom: .1rem solid #9FA1A339; }
+    .contribution-sec .contri-right-div .right-div1 h1 {
+      margin-left: 7rem;
+      font-size: 2rem;
+      width: min-content;
+      transform: scale(1.95, 1.5); }
+    .contribution-sec .contri-right-div .right-div1 p {
+      color: #a9a8a8;
+      height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3.2rem;
+      font-weight: bold; }
+      .contribution-sec .contri-right-div .right-div1 p span {
+        display: inline-block;
+        height: 100%; }
+        .contribution-sec .contri-right-div .right-div1 p span#white {
+          color: white;
+          border-bottom: 0.15rem solid #fa7406; }
+  .contribution-sec .contri-right-div .right-div2 p {
+    color: #a9a8a8;
+    line-height: 2rem;
+    padding: 3rem 15rem 0 0;
+    font-size: 1.4rem; }
+
+.team-sec {
+  height: 69rem; }
+  .team-sec .sec-heading-txt {
+    height: 18rem;
+    padding-left: 2.8rem;
+    border-bottom: .1rem solid #9FA1A339;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: end;
+    font-family: 'Roboto', sans-serif; }
+    .team-sec .sec-heading-txt p {
+      width: 30.6rem;
+      padding: 2.8rem;
+      font-size: 2.6rem;
+      font-weight: 300; }
+      .team-sec .sec-heading-txt p span {
+        color: #b7b5b5;
+        opacity: .7; }
+  .team-sec .team-card {
+    margin: 0 2.8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 30.6rem);
+    grid-template-rows: 36.8rem;
+    justify-items: center;
+    align-items: center; }
+    .team-sec .team-card .cards {
+      height: 31.3rem;
+      width: 25rem;
+      border-radius: .6rem;
+      background-color: #DDDFE1; }
+      .team-sec .team-card .cards .upper-card {
+        padding: 2.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 2.5rem;
+        font-size: .93rem;
+        font-weight: 600;
+        height: 82%; }
+        .team-sec .team-card .cards .upper-card p span.numb {
+          background-color: white;
+          color: #3e3d3d; }
+        .team-sec .team-card .cards .upper-card p span {
+          padding: .15rem .4rem;
+          border-radius: 2rem;
+          background-color: black;
+          color: #DDDFE1; }
+        .team-sec .team-card .cards .upper-card .card-logo {
+          height: 6.1rem;
+          width: max-content;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+        .team-sec .team-card .cards .upper-card .address {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #595959; }
+          .team-sec .team-card .cards .upper-card .address .p2 {
+            margin-top: .6rem;
+            color: #8b8a8a; }
+      .team-sec .team-card .cards .lower-card {
+        height: calc(100% - 82%);
+        border-top: .15rem solid #9FA1A339;
+        font-family: 'Roboto', sans-serif;
+        padding: 0 2.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .team-sec .team-card .cards .lower-card p {
+          font-size: 1.4rem;
+          color: #595959;
+          font-weight: 400; }
+        .team-sec .team-card .cards .lower-card span {
+          font-size: 1.5rem;
+          background-color: white;
+          color: black;
+          height: 2.7rem;
+          width: 2.7rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          justify-content: center;
+          font-weight: 400; }
+      .team-sec .team-card .cards.card8 {
+        font-family: 'Roboto', sans-serif;
+        background-image: linear-gradient(#565555, #232323); }
+        .team-sec .team-card .cards.card8 .upper-card {
+          padding: 7rem 2.8rem; }
+          .team-sec .team-card .cards.card8 .upper-card .last-card-text {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #d3d1d1; }
+          .team-sec .team-card .cards.card8 .upper-card .last-card-numb {
+            color: #707070;
+            font-size: 1.4rem;
+            margin-top: 1.7rem;
+            font-weight: 400; }
+        .team-sec .team-card .cards.card8 .last-card-p p {
+          color: #d4d2d2;
+          font-weight: 300; }
+        .team-sec .team-card .cards.card8 .last-card-p span {
+          background-color: #fa4c12; }
+  .team-sec .member {
+    height: 31rem;
+    width: 25rem;
+    position: relative;
+    z-index: 2; }
+    .team-sec .member .team-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 2.5rem;
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+      height: 100%;
+      line-height: 2rem;
+      font-family: 'Roboto', sans-serif; }
+      .team-sec .member .team-details #social-media {
+        padding: 3rem 0;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem; }
+      .team-sec .member .team-details #name {
+        font-size: 1.2rem;
+        line-height: 2rem; }
+      .team-sec .member .team-details #role {
+        font-size: 1.2rem;
+        color: #767676;
+        padding-right: 4rem; }
+    .team-sec .member#m1::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: .5rem;
+      filter: grayscale(100%) brightness(0.9);
+      background: url("/images/m2.jpg") no-repeat center center/cover; }
+    .team-sec .member#m2::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: .5rem;
+      filter: grayscale(100%) brightness(0.9);
+      background: url("/images/m1.jpg") no-repeat center center/cover; }
+    .team-sec .member#m3::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: .5rem;
+      filter: grayscale(100%) brightness(0.9);
+      background: url("/images/m3.jpg") no-repeat center center/cover; }
+
+.writing-sec {
+  color: black;
+  height: 70rem;
+  background-color: white;
+  border-radius: .5rem; }
+  .writing-sec .writing-div1 {
+    height: 16.7rem;
+    padding-left: 14rem;
+    border-bottom: .1rem solid #9FA1A339;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .writing-sec .writing-div1 p {
+      width: max-content;
+      font-size: 3rem;
+      font-weight: bold;
+      transform: scale(2.5, 1.5);
+      letter-spacing: -.2rem; }
+  .writing-sec .writing-div2 {
+    height: 38rem;
+    padding: 0 2.8rem;
+    border-bottom: .1rem solid #9FA1A339; }
+    .writing-sec .writing-div2 .writing-div2-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 30.6rem);
+      grid-template-rows: 38rem; }
+  .writing-sec .writing-div3 {
+    height: 15rem; }
+    .writing-sec .writing-div3 div {
+      border: .1rem solid black;
+      background-color: yellow; }
 
 /*# sourceMappingURL=main.css.map */

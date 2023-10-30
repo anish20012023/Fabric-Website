@@ -24,7 +24,7 @@ body {
     position: relative;
     background-color: #000000;
     z-index: 1;
-
+    height: max-content;
 
     &::-webkit-scrollbar {
         display: none;
@@ -32,7 +32,7 @@ body {
 
     .bdr {
         width: .1rem;
-        height: 500rem;
+        height: 100%;
         position: absolute;
         z-index: 100;
         background-color: #9FA1A339;
@@ -224,43 +224,7 @@ body {
 
         .cards {
             @include cards;
-
-            &.card8 {
-                font-family: 'Roboto', sans-serif;
-                background-image: linear-gradient(rgb(86, 85, 85), rgb(35, 35, 35));
-
-                .upper-card {
-                    padding: 7rem 2.8rem;
-
-                    .last-card-text {
-                        font-size: 2rem;
-                        font-weight: 400;
-                        color: rgb(211, 209, 209);
-
-                    }
-
-                    .last-card-numb {
-                        color: rgb(112, 112, 112);
-                        font-size: 1.4rem;
-                        margin-top: 1.7rem;
-                        font-weight: 400;
-
-                    }
-
-                }
-
-                .last-card-p {
-                    p {
-                        color: rgb(212, 210, 210);
-                        font-weight: 300;
-                    }
-
-                    span {
-                        background-color: rgb(250, 76, 18);
-                    }
-                }
-
-            }
+            @include last-card;
 
 
         }
@@ -272,7 +236,7 @@ body {
 //bold sec
 
 .bold-main-sec {
-    height: 39.5rem;
+    height: 30.5rem;
     // background-color: yellow;
     padding-top: 11.7rem;
 
@@ -313,7 +277,7 @@ body {
     height: 80rem;
     margin-top: 10rem;
     position: relative;
-    
+
 
     .bck-ylw-txt {
         height: 11rem;
@@ -336,9 +300,10 @@ body {
 
             .collab-card {
                 height: calc(70rem - 18rem);
+
                 .collab-inner-div {
                     margin: 0 2.8rem;
-                     display: grid;
+                    display: grid;
                     grid-template-columns: repeat(4, 30.6rem);
                     grid-template-rows: 36.8rem;
                     justify-items: center;
@@ -347,17 +312,20 @@ body {
                     .cards {
                         background-color: black !important;
                         @include cards;
-                        .address{
-                            p{
+
+                        .address {
+                            p {
                                 color: white;
                             }
                         }
-                        .lower-card{
-                            p{
-                            color: white;
-                            font-weight: 300;
+
+                        .lower-card {
+                            p {
+                                color: white;
+                                font-weight: 300;
                             }
-                            span{
+
+                            span {
                                 background: rgba(152, 151, 151, 0.3);
                                 color: white;
                             }
@@ -380,5 +348,230 @@ body {
             backdrop-filter: blur(55px);
         }
 
+    }
+}
+
+// contibution section css
+
+.contribution-sec {
+    height: 72rem;
+    margin: 0 2.8rem;
+    background-image: radial-gradient(circle at 50% 100%, rgb(83, 12, 1) 10%, rgb(5, 5, 5) 49%, rgb(0, 0, 0) 60%);
+    display: flex;
+
+    .outer-half {
+        border: 1px solid;
+        height: 100%;
+        width: 50%;
+    }
+
+    .contri-right-div {
+        div {
+            height: 50%;
+            // border: .1px solid ;
+
+            padding: 0 2.8rem;
+        }
+
+        .right-div1 {
+            @include flex-box;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            gap: 8rem;
+            border-bottom: .1rem solid #9FA1A339;
+
+            h1 {
+                margin-left: 7rem;
+                font-size: 2rem;
+
+                width: min-content;
+                transform: scale(1.95, 1.5);
+
+
+
+
+            }
+
+            p {
+                color: rgb(169, 168, 168);
+                height: 3rem;
+                @include flex-box;
+                gap: 3.2rem;
+                font-weight: bold;
+
+                span {
+
+                    display: inline-block;
+                    height: 100%;
+
+                    &#white {
+                        color: white;
+                        border-bottom: .15rem solid rgb(250, 116, 6);
+
+                    }
+                }
+            }
+
+
+        }
+
+        .right-div2 {
+            p {
+                color: rgb(169, 168, 168);
+                line-height: 2rem;
+                padding: 3rem 15rem 0 0;
+                font-size: 1.4rem;
+
+            }
+        }
+
+    }
+
+
+
+
+}
+
+// team section css
+
+.team-sec {
+    height: 69rem;
+    @include sec-heading;
+
+    .team-card {
+        margin: 0 2.8rem;
+        display: grid;
+        grid-template-columns: repeat(4, 30.6rem);
+        grid-template-rows: 36.8rem;
+        justify-items: center;
+        align-items: center;
+
+        .cards {
+            @include cards;
+            @include last-card;
+
+
+        }
+    }
+
+    .member {
+        height: 31rem;
+        width: 25rem;
+        position: relative;
+        z-index: 2;
+
+        .team-details {
+            @include flex-box;
+            padding-left: 2.5rem;
+            flex-direction: column;
+            align-items: start;
+            justify-content: end;
+            height: 100%;
+            line-height: 2rem;
+            font-family: 'Roboto', sans-serif;
+
+
+            #social-media {
+                padding: 3rem 0;
+                font-size: 1.2rem;
+                @include flex-box;
+                gap: 1rem;
+
+            }
+
+            #name {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+
+            #role {
+                font-size: 1.2rem;
+                color: rgb(118, 118, 118);
+                padding-right: 4rem;
+            }
+
+        }
+
+
+
+
+        &#m1 {
+
+
+            &::before {
+                @include greyscale-image;
+                background: url("/images/m2.jpg") no-repeat center center/cover;
+            }
+        }
+
+        &#m2 {
+
+
+            &::before {
+                @include greyscale-image;
+                background: url("/images/m1.jpg") no-repeat center center/cover;
+            }
+        }
+
+        &#m3 {
+
+
+            &::before {
+                @include greyscale-image;
+                background: url("/images/m3.jpg") no-repeat center center/cover;
+            }
+        }
+    }
+}
+
+.writing-sec {
+    color: black;
+    height: 70rem;
+    background-color: white;
+    border-radius: .5rem;
+
+
+    .writing-div1 {
+        height: 16.7rem;
+        padding-left: 14rem;
+        border-bottom: .1rem solid #9FA1A339;
+        @include flex-box;
+        p{
+            width: max-content;
+            font-size: 3rem;
+            font-weight: bold;
+            transform: scale(2.5,1.5);
+            letter-spacing: -.2rem;
+
+            
+
+        }
+        
+        
+       
+
+    }
+
+    .writing-div2 {
+        height: 38rem;
+        padding: 0 2.8rem;
+        border-bottom: .1rem solid #9FA1A339;
+        .writing-div2-inner{
+            display: grid;
+            grid-template-columns: repeat(4,30.6rem);
+            grid-template-rows: 38rem;
+
+        }
+        
+
+    }
+
+    .writing-div3 {
+        height: 15rem;
+        div{
+            border: .1rem solid black;
+            background-color: yellow;
+        }
     }
 }
