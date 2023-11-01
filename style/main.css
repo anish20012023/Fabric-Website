@@ -590,7 +590,7 @@ body {
     .contribution-sec .contri-left-div .upper-logo {
       position: relative; }
       .contribution-sec .contri-left-div .upper-logo::before {
-        content: "helo";
+        content: "";
         position: absolute;
         bottom: 0;
         width: 100vw;
@@ -599,20 +599,80 @@ body {
     .contribution-sec .contri-left-div .left-up {
       background-color: rgba(255, 255, 255, 0.1);
       border-bottom-right-radius: 50%;
-      border-top-left-radius: 100%; }
+      border-top-left-radius: 100%;
+      position: relative; }
+      .contribution-sec .contri-left-div .left-up .cut {
+        border-left: 50px solid black;
+        border-top: 20px solid transparent;
+        border-bottom: 60px solid transparent;
+        position: absolute; }
+      .contribution-sec .contri-left-div .left-up .cut1 {
+        left: 40%;
+        top: -10%;
+        transform: rotate(-40deg); }
+      .contribution-sec .contri-left-div .left-up .cut2 {
+        transform: rotate(-85deg);
+        bottom: 30%;
+        left: -2%; }
     .contribution-sec .contri-left-div .right-up {
-      background-color: rgba(255, 255, 255, 0.1);
       border-bottom-left-radius: 50%;
       border-top-right-radius: 100%;
-      background: url(/images/gradient-color.jpg) no-repeat center center/cover; }
+      background: url(/images/gradient-color.jpg) no-repeat center center/cover;
+      position: relative; }
+      .contribution-sec .contri-left-div .right-up .cut {
+        border-left: 50px solid black;
+        border-top: 20px solid transparent;
+        border-bottom: 60px solid transparent;
+        position: absolute; }
+      .contribution-sec .contri-left-div .right-up .cut3 {
+        left: 40%;
+        top: -10%;
+        transform: rotate(-40deg);
+        transform: scale(1); }
+      .contribution-sec .contri-left-div .right-up .cut4 {
+        transform: rotate(40deg);
+        bottom: 30%;
+        right: -2%; }
     .contribution-sec .contri-left-div .left-down {
       background-color: rgba(255, 255, 255, 0.1);
       border-top-right-radius: 50%;
-      border-bottom-left-radius: 100%; }
+      border-bottom-left-radius: 100%;
+      position: relative;
+      overflow: hidden; }
+      .contribution-sec .contri-left-div .left-down .cut {
+        border-left: 50px solid black;
+        border-top: 20px solid transparent;
+        border-bottom: 60px solid transparent;
+        position: absolute; }
+      .contribution-sec .contri-left-div .left-down .cut5 {
+        left: -2%;
+        top: 20%;
+        transform: rotate(50deg) scale(-1); }
+      .contribution-sec .contri-left-div .left-down .cut6 {
+        left: 30%;
+        top: 60%;
+        transform: rotate(20deg) scale(-1); }
     .contribution-sec .contri-left-div .right-down {
       background-color: rgba(255, 255, 255, 0.1);
       border-top-left-radius: 50%;
-      border-bottom-right-radius: 100%; }
+      border-bottom-right-radius: 100%;
+      position: relative;
+      overflow: hidden; }
+      .contribution-sec .contri-left-div .right-down .cut {
+        border-left: 50px solid black;
+        border-top: 20px solid transparent;
+        border-bottom: 60px solid transparent;
+        position: absolute; }
+      .contribution-sec .contri-left-div .right-down .cut {
+        border-left: 50px solid #2A0803; }
+      .contribution-sec .contri-left-div .right-down .cut7 {
+        right: -1%;
+        top: 30%;
+        transform: rotate(85deg); }
+      .contribution-sec .contri-left-div .right-down .cut8 {
+        right: 38%;
+        top: 70%;
+        transform: rotate(130deg); }
   .contribution-sec .contri-right-div div {
     height: 50%;
     padding: 0 2.8rem; }

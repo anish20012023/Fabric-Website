@@ -216,3 +216,12 @@
 
     }
 }
+
+@mixin logo-cut{
+    .cut {
+        border-left: 50px solid rgb(0, 0, 0);
+        border-top: 20px solid transparent;
+        border-bottom: 60px solid transparent;
+
+        position: absolute;}
+}
