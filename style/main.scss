@@ -1044,6 +1044,12 @@ body {
             height: 100%;
             padding: 0 3rem;
             @include flex-box;
+            font-size: 1.2rem;
+            color: $ftr-para-color;
+           
+            span{
+                color: white;
+            }
         }
     }
 }
