@@ -73,7 +73,9 @@ body {
       .nav-container .navbar .menu .nav-btn-ham {
         display: flex;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        align-items: center;
+        gap: 3rem; }
         .nav-container .navbar .menu .nav-btn-ham #investor-btn {
           position: relative;
           border-radius: .3rem; }
@@ -93,16 +95,35 @@ body {
           .nav-container .navbar .menu .nav-btn-ham #investor-btn::before {
             content: "";
             border-radius: .3rem;
-            background-color: #e1dddd;
+            background-color: #787777;
             position: absolute;
             height: 100%;
             width: 100%;
             z-index: -1;
             filter: blur(0.01rem); }
         .nav-container .navbar .menu .nav-btn-ham #ham-btn {
-          height: 4rem;
-          width: 5rem;
-          border: 1px solid red; }
+          height: 2rem;
+          width: 2.4rem;
+          position: relative;
+          cursor: pointer; }
+          .nav-container .navbar .menu .nav-btn-ham #ham-btn .hamline {
+            border: .1rem solid;
+            width: .1rem;
+            height: 100%;
+            position: absolute;
+            transition: all .6s; }
+            .nav-container .navbar .menu .nav-btn-ham #ham-btn .hamline.line1 {
+              left: 25%; }
+            .nav-container .navbar .menu .nav-btn-ham #ham-btn .hamline.line2 {
+              left: 50%; }
+            .nav-container .navbar .menu .nav-btn-ham #ham-btn .hamline.line3 {
+              left: 75%; }
+            .nav-container .navbar .menu .nav-btn-ham #ham-btn .hamline.line4 {
+              left: 100%; }
+          .nav-container .navbar .menu .nav-btn-ham #ham-btn:hover .line2 {
+            left: 40%; }
+          .nav-container .navbar .menu .nav-btn-ham #ham-btn:hover .line3 {
+            left: 50%; }
 
 .header-sec1 {
   width: 61.2rem;
@@ -549,6 +570,49 @@ body {
   .contribution-sec .outer-half {
     height: 100%;
     width: 50%; }
+  .contribution-sec .contri-left-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center; }
+    .contribution-sec .contri-left-div .main-logo-div {
+      height: 44rem;
+      width: 44rem; }
+    .contribution-sec .contri-left-div .logo-part {
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: space-evenly; }
+    .contribution-sec .contri-left-div .logo-part-div {
+      width: 20rem;
+      height: 20rem; }
+    .contribution-sec .contri-left-div .upper-logo {
+      position: relative; }
+      .contribution-sec .contri-left-div .upper-logo::before {
+        content: "helo";
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: .01rem;
+        background-color: #9FA1A339; }
+    .contribution-sec .contri-left-div .left-up {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-right-radius: 50%;
+      border-top-left-radius: 100%; }
+    .contribution-sec .contri-left-div .right-up {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-left-radius: 50%;
+      border-top-right-radius: 100%;
+      background: url(/images/gradient-color.jpg) no-repeat center center/cover; }
+    .contribution-sec .contri-left-div .left-down {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 100%; }
+    .contribution-sec .contri-left-div .right-down {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 100%; }
   .contribution-sec .contri-right-div div {
     height: 50%;
     padding: 0 2.8rem; }

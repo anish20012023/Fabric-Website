@@ -371,6 +371,74 @@ body {
         width: 50%;
     }
 
+    .contri-left-div {
+        @include flex-box;
+        justify-content: center;
+
+        .main-logo-div {
+            height: 44rem;
+            width: 44rem;
+        }
+
+        .logo-part {
+            height: 50%;
+            @include flex-box;
+            justify-content: space-evenly;
+
+
+
+        }
+
+        .logo-part-div {
+            width: 20rem;
+            height: 20rem;
+        }
+        .upper-logo{
+            position: relative;
+            &::before{
+                content: "helo";
+                position: absolute;
+                bottom: 0;
+                width: 100vw;
+                height: .01rem;
+                background-color: #9FA1A339;
+               
+            }
+            
+        }
+
+        .left-up {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-right-radius: 50%;
+            border-top-left-radius: 100%;
+
+        }
+
+        .right-up {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 100%;
+            background: url(/images/gradient-color.jpg) no-repeat center center/cover;
+        }
+
+        .left-down {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 100%;
+
+        }
+
+        .right-down {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 100%;
+        }
+
+
+    }
+
+
+
     .contri-right-div {
         div {
             height: 50%;
@@ -584,11 +652,11 @@ body {
                 background: rgb(255, 60, 0) url(/images/footer\ logo.png) no-repeat center;
                 background-size: 50%;
                 border-radius: 1rem;
-            
-                &::before{
+
+                &::before {
                     content: "";
                     position: absolute;
-                    background:url(/images/gradient-color.jpg) no-repeat center center/cover;
+                    background: url(/images/gradient-color.jpg) no-repeat center center/cover;
                     opacity: .7;
                     width: 100%;
                     height: 100%;
