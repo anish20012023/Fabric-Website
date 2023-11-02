@@ -437,11 +437,22 @@ body {
     z-index: -2;
     width: 100%;
     border-radius: .5rem;
-    background-color: #ffe600; }
+    background-color: #ffe600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+    .collab-sec .bck-ylw-txt .abs-txt {
+      font-family: "Roboto", sans-serif;
+      color: black;
+      font-weight: 900;
+      font-size: 1.5rem;
+      transform: scale(5.3, 3.4); }
   .collab-sec .outer-blur-bck {
     height: 67rem;
     position: relative;
-    top: 9rem; }
+    top: 7rem; }
     .collab-sec .outer-blur-bck .inner-blur-bck {
       height: 100%; }
       .collab-sec .outer-blur-bck .inner-blur-bck .sec-heading-txt {
@@ -998,9 +1009,21 @@ body {
   height: 77rem; }
   .footer-sec .footer-abs-div {
     position: absolute;
-    height: 10rem;
+    height: 6.4rem;
     background-color: #ffe600;
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden; }
+    .footer-sec .footer-abs-div .abs-txt {
+      font-family: "Roboto", sans-serif;
+      color: black;
+      font-weight: 900;
+      font-size: 1.5rem;
+      transform: scale(5.3, 3.4); }
   .footer-sec footer {
     width: 100%;
     position: absolute;

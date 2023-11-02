@@ -291,13 +291,28 @@ body {
         width: 100%;
         border-radius: .5rem;
         background-color: #ffe600;
+        @include flex-box;
+        justify-content: center;
+        overflow: hidden;
+
+        .abs-txt {
+            font-family: $font-roboto;
+            color: black;
+            font-weight: 900;
+            font-size: 1.5rem;
+            transform: scale(5.3,3.4);
+            
+            
+
+        }
+        
 
     }
 
     .outer-blur-bck {
         height: 67rem;
         position: relative;
-        top: 9rem;
+        top: 7rem;
 
         .inner-blur-bck {
             height: 100%;
@@ -396,7 +411,8 @@ body {
 
         .upper-logo {
             position: relative;
-// border line bototm
+
+            // border line bototm
             &::before {
                 content: "";
                 position: absolute;
@@ -468,7 +484,7 @@ body {
                 left: -2%;
                 top: 20%;
                 transform: rotate(50deg) scale(-1);
-             
+
             }
 
             .cut6 {
@@ -487,13 +503,16 @@ body {
             position: relative;
             overflow: hidden;
             @include logo-cut;
+
             .cut {
-                border-left: 50px solid #2A0803;}
+                border-left: 50px solid #2A0803;
+            }
+
             .cut7 {
                 right: -1%;
                 top: 30%;
                 transform: rotate(85deg);
-             
+
             }
 
             .cut8 {
@@ -839,9 +858,24 @@ body {
 
     .footer-abs-div {
         position: absolute;
-        height: 10rem;
+        height: 6.4rem;
         background-color: #ffe600;
         width: 100%;
+        @include flex-box;
+        justify-content: center;
+        align-items: end;
+        overflow: hidden;
+
+        .abs-txt {
+            font-family: $font-roboto;
+            color: black;
+            font-weight: 900;
+            font-size: 1.5rem;
+            transform: scale(5.3,3.4);
+            
+            
+
+        }
 
     }
 
@@ -1046,8 +1080,8 @@ body {
             @include flex-box;
             font-size: 1.2rem;
             color: $ftr-para-color;
-           
-            span{
+
+            span {
                 color: white;
             }
         }
