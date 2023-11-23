@@ -4,6 +4,17 @@
     align-items: center;
 
 }
+@mixin bottomLine{
+    &::before{
+        content: "";
+        position: absolute;
+        background-color:#9FA1A339;
+        width: 200vw;
+        height: .1rem;
+        top: 100%;
+        left: -100%;
+    }
+}
 
 
 @mixin hover-effect{
@@ -49,7 +60,9 @@
     .sec-heading-txt {
         height: 18rem;
         padding-left: 2.8rem;
-        border-bottom: .1rem solid #9FA1A339;
+        position: relative;
+
+        @include bottomLine;
 
         @include flex-box;
         align-items: end;

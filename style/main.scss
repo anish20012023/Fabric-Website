@@ -20,14 +20,18 @@ html {
 
 
 }
+.container{
+    position: relative;
+}
 
 body {
 
     color: white;
-    position: relative;
+    padding: 0 2.2%;
+    overflow-x: hidden;
     background-color: #000000;
-    z-index: 1;
-    height: max-content;
+    
+  
 
     &::-webkit-scrollbar {
         display: none;
@@ -43,27 +47,27 @@ body {
 
         &.b1 {
 
-            left: 2.8rem;
+            left: 0%;
         }
 
         &.b2 {
 
-            left: 33.4rem;
+            left:25%;
         }
 
         &.b3 {
 
-            left: 64rem;
+            left: 50%;
         }
 
         &.b4 {
 
-            left: 94.6rem;
+            left: 75%;
         }
 
         &.b5 {
 
-            left: 125.2rem;
+            left: 100%;
         }
     }
 
@@ -75,10 +79,10 @@ body {
 
 //header section 2
 
-.header-sec1 {
-    width: 61.2rem;
-    margin: 2.8rem 2.8rem 0 auto;
-    height: 29.5rem;
+.header-sec1 { 
+    width: 50%;
+    margin:0 50%;
+    min-height: 29.5rem;
 
     @include flex-box;
     flex-direction: column;
@@ -101,11 +105,14 @@ body {
 
 }
 
-.header-sec2 {
+.header-sec2 { 
     position: relative;
+    
+   
 
     .sec2-txt {
-        height: 19.1rem;
+        min-height: 25rem;
+        height: max-content;
 
         @include flex-box;
         justify-content: center;
@@ -113,12 +120,12 @@ body {
 
         h1.fab {
 
-            margin-left: -5.4rem;
-            font-size: 6rem;
-            transform: scale(6.8, 4.3);
+            margin-left: -50px;
+            font-size: 4.5vw;
+            transform: scale(7.12, 4.6);
             letter-spacing: -.3rem;
             font-weight: 500;
-            line-height: 4.5rem;
+          
             font-family: $font-roboto;
 
 
@@ -129,7 +136,7 @@ body {
     p {
         font-size: 2.5rem;
         position: absolute;
-        right: 2.7rem;
+        right:0;
         top: 0rem;
 
     }
@@ -144,12 +151,13 @@ body {
     .div2-mainsec {
         height: 66rem;
         @include flex-box;
+        justify-content: end;
 
-        .div2-sec1 {
-            width: 61.2rem;
+        .div2-sec1 { 
+            width:50%;
             height: 40rem;
 
-            margin: 2.8rem 2.8rem 0 auto;
+            
             @include flex-box;
             flex-direction: column;
             align-items: start;
@@ -189,7 +197,7 @@ body {
 
         h1 {
             margin-left: -1.1rem;
-            font-size: 5.8rem;
+            font-size: 4.43vw;
             font-weight: bold;
             transform: scale(1.76, 1.1);
             letter-spacing: -.31rem;
@@ -215,11 +223,11 @@ body {
     @include sec-heading;
 
     .pfolio-grid {
-        margin: 0 2.8rem;
-
+        
+      
         height: 75rem;
         display: grid;
-        grid-template-columns: repeat(4, 30.6rem);
+        grid-template-columns: repeat(4, 25%);
 
         grid-template-rows: 1fr 1fr;
         justify-items: center;
@@ -242,20 +250,19 @@ body {
 
 .bold-main-sec {
     height: 30.5rem;
-    // background-color: yellow;
-    padding-top: 11.7rem;
+    padding-top: 10rem;
 
-    .bold-sec {
-        margin: 0 2.8rem 0 auto;
+    .bold-sec { 
+        margin:0 50%;
         @include flex-box;
         flex-direction: column;
         align-items: start;
         justify-content: space-between;
 
-        width: 61.2rem;
-        height: 17rem;
+        width:50%;
+        height: 100%;
 
-        p.bld-txt {
+        p.bld-txt { 
             font-size: 1.2rem;
             font-weight: 600;
             margin-left: 14.7rem;
@@ -278,13 +285,14 @@ body {
     }
 }
 
-.collab-sec {
+.collab-sec { 
     height: 80rem;
     margin-top: 10rem;
     position: relative;
+   
 
 
-    .bck-ylw-txt {
+    .bck-ylw-txt { 
         height: 11rem;
         position: absolute;
         z-index: -2;
@@ -321,10 +329,10 @@ body {
             .collab-card {
                 height: calc(70rem - 18rem);
 
-                .collab-inner-div {
-                    margin: 0 2.8rem;
+                .collab-inner-div { 
+                  
                     display: grid;
-                    grid-template-columns: repeat(4, 30.6rem);
+                    grid-template-columns: repeat(4, 25%);
                     grid-template-rows: 36.8rem;
                     justify-items: center;
                     align-items: center;
@@ -376,14 +384,16 @@ body {
 // contibution section css
 
 .contribution-sec {
+   
     height: 72rem;
-    margin: 0 2.8rem;
+   
     background-image: radial-gradient(circle at 50% 100%, rgb(83, 12, 1) 10%, rgb(5, 5, 5) 49%, rgb(0, 0, 0) 60%);
     display: flex;
 
     .outer-half {
         height: 100%;
         width: 50%;
+        
     }
 
     .contri-left-div {
@@ -602,10 +612,10 @@ body {
     height: 69rem;
     @include sec-heading;
 
-    .team-card {
-        margin: 0 2.8rem;
+    .team-card {  
+       
         display: grid;
-        grid-template-columns: repeat(4, 30.6rem);
+        grid-template-columns: repeat(4, 25%);
         grid-template-rows: 36.8rem;
         justify-items: center;
         align-items: center;
@@ -695,12 +705,15 @@ body {
     height: 66rem;
     background-color: white;
     border-radius: .5rem;
+  
 
 
-    .writing-div1 {
+    .writing-div1 { 
         height: 16.7rem;
         padding-left: 14rem;
-        border-bottom: .1rem solid #9FA1A339;
+        position: relative;
+
+        @include bottomLine;
         @include flex-box;
 
         p {
@@ -719,22 +732,23 @@ body {
 
     }
 
-    .writing-div2 {
+    .writing-div2 { 
         height: 38rem;
-        padding: 0 2.8rem;
-        border-bottom: .1rem solid #9FA1A339;
+        position: relative;
+
+        @include bottomLine;
 
         .writing-div2-inner {
-
+           
             display: grid;
-            grid-template-columns: repeat(4, 30.6rem);
+            grid-template-columns: repeat(4, 25%);
             grid-template-rows: 38rem;
 
             #writing-logo {
                 padding: 6rem 3rem;
             }
 
-            .writing-image {
+            .writing-image { 
                 height: 14rem;
                 position: relative;
                 width: 14rem;
@@ -755,9 +769,10 @@ body {
 
             }
 
-            .wrt-grid-item {
+            .wrt-grid-item { 
                 padding: 2.8rem;
                 @include flex-box;
+                
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: start;
@@ -891,13 +906,15 @@ body {
 
     .footer-upper-outer {
         height: 88%;
-        border-bottom: .1rem solid #9FA1A339;
+        position: relative;
+
+        @include bottomLine;
+        
 
         &>div {
             height: 100%;
-            margin: 0 2.8rem;
             display: grid;
-            grid-template-columns: repeat(4, 30.6rem);
+            grid-template-columns: repeat(4, 25%);
             grid-template-rows: 1fr;
 
         }
@@ -1070,7 +1087,7 @@ body {
 
     .footer-lower {
         height: calc(70rem - 88%);
-        margin: 0 2.8rem;
+       
         display: flex;
 
         div {

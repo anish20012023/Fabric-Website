@@ -2,15 +2,19 @@
 
 
     .nav-container {
-        border-bottom: .1rem solid #9FA1A339;
+        
 
         height: 7.3rem;
 
         .navbar {
             font-family: $font-main;
             height: 100%;
-            margin: 0 2.8rem;
+          
             @include flex-box;
+            position: relative;
+
+            @include bottomLine;
+        
 
             .logo {
                 font-size: 1.3rem;

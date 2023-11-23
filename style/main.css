@@ -8,12 +8,14 @@ html {
   font-size: 62.5%;
   font-family: sans-serif; }
 
+.container {
+  position: relative; }
+
 body {
   color: white;
-  position: relative;
-  background-color: #000000;
-  z-index: 1;
-  height: max-content; }
+  padding: 0 2.2%;
+  overflow-x: hidden;
+  background-color: #000000; }
   body::-webkit-scrollbar {
     display: none; }
   body .bdr {
@@ -24,26 +26,33 @@ body {
     background-color: #9FA1A339;
     opacity: 1; }
     body .bdr.b1 {
-      left: 2.8rem; }
+      left: 0%; }
     body .bdr.b2 {
-      left: 33.4rem; }
+      left: 25%; }
     body .bdr.b3 {
-      left: 64rem; }
+      left: 50%; }
     body .bdr.b4 {
-      left: 94.6rem; }
+      left: 75%; }
     body .bdr.b5 {
-      left: 125.2rem; }
+      left: 100%; }
 
 .nav-container {
-  border-bottom: .1rem solid #9FA1A339;
   height: 7.3rem; }
   .nav-container .navbar {
     font-family: "Raleway", sans-serif;
     height: 100%;
-    margin: 0 2.8rem;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
+    .nav-container .navbar::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .nav-container .navbar .logo {
       font-size: 1.3rem; }
     .nav-container .navbar .menu {
@@ -126,9 +135,9 @@ body {
             left: 50%; }
 
 .header-sec1 {
-  width: 61.2rem;
-  margin: 2.8rem 2.8rem 0 auto;
-  height: 29.5rem;
+  width: 50%;
+  margin: 0 50%;
+  min-height: 29.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,23 +180,23 @@ body {
 .header-sec2 {
   position: relative; }
   .header-sec2 .sec2-txt {
-    height: 19.1rem;
+    min-height: 25rem;
+    height: max-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-content: center; }
     .header-sec2 .sec2-txt h1.fab {
-      margin-left: -5.4rem;
-      font-size: 6rem;
-      transform: scale(6.8, 4.3);
+      margin-left: -50px;
+      font-size: 4.5vw;
+      transform: scale(7.12, 4.6);
       letter-spacing: -.3rem;
       font-weight: 500;
-      line-height: 4.5rem;
       font-family: "Roboto", sans-serif; }
   .header-sec2 p {
     font-size: 2.5rem;
     position: absolute;
-    right: 2.7rem;
+    right: 0;
     top: 0rem; }
 
 .outer-div2-mainsec {
@@ -197,11 +206,11 @@ body {
     height: 66rem;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    justify-content: end; }
     .outer-div2-mainsec .div2-mainsec .div2-sec1 {
-      width: 61.2rem;
+      width: 50%;
       height: 40rem;
-      margin: 2.8rem 2.8rem 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -253,7 +262,7 @@ body {
     justify-content: center; }
     .outer-div2-mainsec .banner-text h1 {
       margin-left: -1.1rem;
-      font-size: 5.8rem;
+      font-size: 4.43vw;
       font-weight: bold;
       transform: scale(1.76, 1.1);
       letter-spacing: -.31rem; }
@@ -268,12 +277,20 @@ body {
   .porfolio-main-sec .sec-heading-txt {
     height: 18rem;
     padding-left: 2.8rem;
-    border-bottom: .1rem solid #9FA1A339;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items: end;
     font-family: 'Roboto', sans-serif; }
+    .porfolio-main-sec .sec-heading-txt::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .porfolio-main-sec .sec-heading-txt p {
       width: 30.6rem;
       padding: 2.8rem;
@@ -283,10 +300,9 @@ body {
         color: #b7b5b5;
         opacity: .7; }
   .porfolio-main-sec .pfolio-grid {
-    margin: 0 2.8rem;
     height: 75rem;
     display: grid;
-    grid-template-columns: repeat(4, 30.6rem);
+    grid-template-columns: repeat(4, 25%);
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     align-items: end; }
@@ -384,17 +400,17 @@ body {
 
 .bold-main-sec {
   height: 30.5rem;
-  padding-top: 11.7rem; }
+  padding-top: 10rem; }
   .bold-main-sec .bold-sec {
-    margin: 0 2.8rem 0 auto;
+    margin: 0 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    width: 61.2rem;
-    height: 17rem; }
+    width: 50%;
+    height: 100%; }
     .bold-main-sec .bold-sec p.bld-txt {
       font-size: 1.2rem;
       font-weight: 600;
@@ -458,12 +474,20 @@ body {
       .collab-sec .outer-blur-bck .inner-blur-bck .sec-heading-txt {
         height: 18rem;
         padding-left: 2.8rem;
-        border-bottom: .1rem solid #9FA1A339;
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-items: end;
         font-family: 'Roboto', sans-serif; }
+        .collab-sec .outer-blur-bck .inner-blur-bck .sec-heading-txt::before {
+          content: "";
+          position: absolute;
+          background-color: #9FA1A339;
+          width: 200vw;
+          height: .1rem;
+          top: 100%;
+          left: -100%; }
         .collab-sec .outer-blur-bck .inner-blur-bck .sec-heading-txt p {
           width: 30.6rem;
           padding: 2.8rem;
@@ -475,9 +499,8 @@ body {
       .collab-sec .outer-blur-bck .inner-blur-bck .collab-card {
         height: calc(70rem - 18rem); }
         .collab-sec .outer-blur-bck .inner-blur-bck .collab-card .collab-inner-div {
-          margin: 0 2.8rem;
           display: grid;
-          grid-template-columns: repeat(4, 30.6rem);
+          grid-template-columns: repeat(4, 25%);
           grid-template-rows: 36.8rem;
           justify-items: center;
           align-items: center; }
@@ -575,7 +598,6 @@ body {
 
 .contribution-sec {
   height: 72rem;
-  margin: 0 2.8rem;
   background-image: radial-gradient(circle at 50% 100%, #530c01 10%, #050505 49%, black 60%);
   display: flex; }
   .contribution-sec .outer-half {
@@ -726,12 +748,20 @@ body {
   .team-sec .sec-heading-txt {
     height: 18rem;
     padding-left: 2.8rem;
-    border-bottom: .1rem solid #9FA1A339;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items: end;
     font-family: 'Roboto', sans-serif; }
+    .team-sec .sec-heading-txt::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .team-sec .sec-heading-txt p {
       width: 30.6rem;
       padding: 2.8rem;
@@ -741,9 +771,8 @@ body {
         color: #b7b5b5;
         opacity: .7; }
   .team-sec .team-card {
-    margin: 0 2.8rem;
     display: grid;
-    grid-template-columns: repeat(4, 30.6rem);
+    grid-template-columns: repeat(4, 25%);
     grid-template-rows: 36.8rem;
     justify-items: center;
     align-items: center; }
@@ -895,10 +924,18 @@ body {
   .writing-sec .writing-div1 {
     height: 16.7rem;
     padding-left: 14rem;
-    border-bottom: .1rem solid #9FA1A339;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .writing-sec .writing-div1::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .writing-sec .writing-div1 p {
       width: max-content;
       font-size: 3rem;
@@ -907,11 +944,18 @@ body {
       letter-spacing: -.2rem; }
   .writing-sec .writing-div2 {
     height: 38rem;
-    padding: 0 2.8rem;
-    border-bottom: .1rem solid #9FA1A339; }
+    position: relative; }
+    .writing-sec .writing-div2::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .writing-sec .writing-div2 .writing-div2-inner {
       display: grid;
-      grid-template-columns: repeat(4, 30.6rem);
+      grid-template-columns: repeat(4, 25%);
       grid-template-rows: 38rem; }
       .writing-sec .writing-div2 .writing-div2-inner #writing-logo {
         padding: 6rem 3rem; }
@@ -1034,12 +1078,19 @@ body {
     font-family: "Roboto", sans-serif; }
   .footer-sec .footer-upper-outer {
     height: 88%;
-    border-bottom: .1rem solid #9FA1A339; }
+    position: relative; }
+    .footer-sec .footer-upper-outer::before {
+      content: "";
+      position: absolute;
+      background-color: #9FA1A339;
+      width: 200vw;
+      height: .1rem;
+      top: 100%;
+      left: -100%; }
     .footer-sec .footer-upper-outer > div {
       height: 100%;
-      margin: 0 2.8rem;
       display: grid;
-      grid-template-columns: repeat(4, 30.6rem);
+      grid-template-columns: repeat(4, 25%);
       grid-template-rows: 1fr; }
     .footer-sec .footer-upper-outer .ftr-inner {
       height: 100%;
@@ -1173,7 +1224,6 @@ body {
       background: url(/images/partner2.jpg) no-repeat center center/cover; }
   .footer-sec .footer-lower {
     height: calc(70rem - 88%);
-    margin: 0 2.8rem;
     display: flex; }
     .footer-sec .footer-lower div {
       width: 50%;
